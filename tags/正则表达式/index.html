@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>标签: 正则表达式 | Jerome.明允的个人博客</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Jerome Chan">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/jeromechan" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Jerome.明允</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">to be a fantastic programmer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Hainan, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          
+            <a href="/.">
+          
+              
+                <i class="icon icon-home-fill"></i>
+              
+              <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          
+            <a href="/archives">
+          
+              
+                <i class="icon icon-archives-fill"></i>
+              
+              <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          
+            <a href="/categories">
+          
+              
+                <i class="icon icon-folder"></i>
+              
+              <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          
+            <a href="/tags">
+          
+              
+                <i class="icon icon-tags"></i>
+              
+              <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          
+            <a href="/repository">
+          
+              
+                <i class="icon icon-project"></i>
+              
+              <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          
+            <a href="/books">
+          
+              
+                <i class="icon icon-book-fill"></i>
+              
+              <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          
+            <a href="/links">
+          
+              
+                <i class="icon icon-friendship"></i>
+              
+              <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          
+            <a href="https://www.linkedin.com/in/chenjinlong/" target="_blank" rel="noopener">
+          
+              
+                <i class="icon icon-cup-fill"></i>
+              
+              <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/jeromechan" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.linkedin.com/in/chenjinlong/" target="_blank" title="Linkedin" data-toggle=tooltip data-placement=top><i class="icon icon-linkedin"></i></a></li>
+        
+        <li><a href="https://twitter.com/jeromechan369" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="http://weibo.com/5812529126" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E7%8E%AF%E5%A2%83/">工具环境</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%85%E8%A1%8C%E6%91%84%E5%BD%B1/">旅行摄影</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%A1%E7%90%86%E5%93%B2%E5%AD%A6/">管理哲学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><span class="category-list-count">15</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2004%E5%84%8B%E5%B7%9E%E6%97%B1%E6%83%85/" rel="tag">2004儋州旱情</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2014%E5%B9%B4%E5%8D%97%E4%BA%AC%E9%9D%92%E5%A5%A5%E4%BC%9A/" rel="tag">2014年南京青奥会</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache%E5%AE%89%E8%A3%85/" rel="tag">Apache安装</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Build-System/" rel="tag">Build System</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/" rel="tag">Git分支合并</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA-Switch/" rel="tag">JAVA Switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LAMP%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">LAMP环境搭建</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E7%94%A8%E6%88%B7/" rel="tag">Linux用户</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ServerAlias/" rel="tag">ServerAlias</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ServerName/" rel="tag">ServerName</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sitemap-Protocol/" rel="tag">Sitemap Protocol</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Switch%E8%AF%AD%E5%8F%A5/" rel="tag">Switch语句</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WAMP/" rel="tag">WAMP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apache-linux-%E5%AE%89%E8%A3%85/" rel="tag">apache linux 安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/" rel="tag">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/concurrency/" rel="tag">concurrency</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fastjson/" rel="tag">fastjson</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feature-toggle/" rel="tag">feature toggle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-flow/" rel="tag">git flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-flow/" rel="tag">github flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E6%B5%81%E7%A8%8B/" rel="tag">git流程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/" rel="tag">git软件开发过程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/" rel="tag">jekyll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/license/" rel="tag">license</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">markdown基础知识</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleman/" rel="tag">middleman</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mike-flow/" rel="tag">mike flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openfire/" rel="tag">openfire</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openfire-plugin/" rel="tag">openfire plugin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/" rel="tag">opensource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallel-computing/" rel="tag">parallel computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance-monitor/" rel="tag">performance monitor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php-linux-%E5%AE%89%E8%A3%85/" rel="tag">php linux 安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php%E5%AE%89%E8%A3%85/" rel="tag">php安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presswork%E9%9D%A2%E5%8C%85%E5%B1%91/" rel="tag">presswork面包屑</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/principles/" rel="tag">principles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project-manage/" rel="tag">project manage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/protocol/" rel="tag">protocol</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/specification/" rel="tag">specification</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime-text/" rel="tag">sublime text</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/" rel="tag">wordpress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress-%E4%B8%BB%E9%A2%98/" rel="tag">wordpress 主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xdebug/" rel="tag">xdebug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xrebel/" rel="tag">xrebel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7/" rel="tag">上海</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7%E5%8D%8E%E4%B8%9C%E5%B8%88%E5%A4%A7/" rel="tag">上海华东师大</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%AD%A6%E7%A4%BE%E4%BC%9A%E5%AE%9E%E8%B7%B5/" rel="tag">中学社会实践</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E5%B8%82%E5%9C%BA/" rel="tag">互联网市场</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E8%90%A5%E9%94%80/" rel="tag">互联网营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%97%E4%BA%AC%E5%A5%A5%E4%BD%93%E4%B8%AD%E5%BF%83/" rel="tag">南京奥体中心</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C/" rel="tag">南京总统府</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%97%E4%BA%AC%E6%97%85%E6%B8%B8%E6%99%AF%E7%82%B9/" rel="tag">南京旅游景点</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%AD%A6/" rel="tag">大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%AD%A6%E5%86%9B%E8%AE%AD/" rel="tag">大学军训</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/" rel="tag">大学生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" rel="tag">年度总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%89%E4%BD%8D%E4%B8%8E/" rel="tag">按位与</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%89%E4%BD%8D%E6%88%96/" rel="tag">按位或</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%A8%E5%B9%BF/" rel="tag">推广</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE/" rel="tag">改革开放</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/" rel="tag">方法调用</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%87%E7%AD%BE1/" rel="tag">标签1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A6%9C%E6%A0%B7/" rel="tag">榜样</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%81%B5%E8%B0%B7%E5%AF%BA/" rel="tag">灵谷寺</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" rel="tag">版本发布</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A0%94%E5%8F%91%E4%BA%BA%E8%A7%82%E7%82%B9/" rel="tag">研发人观点</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E6%83%85%E8%B0%83%E6%9F%A5/" rel="tag">社会实情调查</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/" rel="tag">系统运维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E5%87%86%E5%88%99/" rel="tag">编程准则</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%84%E5%88%92%E9%A1%B9%E7%9B%AE%E6%97%A5%E7%A8%8B/" rel="tag">规划项目日程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC/" rel="tag">软件版本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%92%9F%E5%B1%B1%E9%A3%8E%E6%99%AF%E5%8C%BA/" rel="tag">钟山风景区</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%86%E5%AE%B6%E5%98%B4/" rel="tag">陆家嘴</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86/" rel="tag">青春记忆</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/" rel="tag">面向对象设计</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E4%B9%90%E4%B9%8B%E6%97%85/" rel="tag">音乐之旅</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/2004%E5%84%8B%E5%B7%9E%E6%97%B1%E6%83%85/" style="font-size: 13px;">2004儋州旱情</a> <a href="/tags/2014%E5%B9%B4%E5%8D%97%E4%BA%AC%E9%9D%92%E5%A5%A5%E4%BC%9A/" style="font-size: 13px;">2014年南京青奥会</a> <a href="/tags/Apache%E5%AE%89%E8%A3%85/" style="font-size: 13.25px;">Apache安装</a> <a href="/tags/Build-System/" style="font-size: 13px;">Build System</a> <a href="/tags/Database/" style="font-size: 13px;">Database</a> <a href="/tags/Git/" style="font-size: 13.5px;">Git</a> <a href="/tags/Git%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/" style="font-size: 13px;">Git分支合并</a> <a href="/tags/JAVA-Switch/" style="font-size: 13px;">JAVA Switch</a> <a href="/tags/Java/" style="font-size: 13px;">Java</a> <a href="/tags/LAMP%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 13.25px;">LAMP环境搭建</a> <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/Linux%E7%94%A8%E6%88%B7/" style="font-size: 13px;">Linux用户</a> <a href="/tags/PHP/" style="font-size: 13.25px;">PHP</a> <a href="/tags/ServerAlias/" style="font-size: 13px;">ServerAlias</a> <a href="/tags/ServerName/" style="font-size: 13px;">ServerName</a> <a href="/tags/Sitemap-Protocol/" style="font-size: 13px;">Sitemap Protocol</a> <a href="/tags/Switch%E8%AF%AD%E5%8F%A5/" style="font-size: 13px;">Switch语句</a> <a href="/tags/WAMP/" style="font-size: 13px;">WAMP</a> <a href="/tags/apache-linux-%E5%AE%89%E8%A3%85/" style="font-size: 13px;">apache linux 安装</a> <a href="/tags/architecture/" style="font-size: 13px;">architecture</a> <a href="/tags/concurrency/" style="font-size: 13px;">concurrency</a> <a href="/tags/fastjson/" style="font-size: 13px;">fastjson</a> <a href="/tags/feature-toggle/" style="font-size: 13px;">feature toggle</a> <a href="/tags/git-flow/" style="font-size: 13px;">git flow</a> <a href="/tags/github-flow/" style="font-size: 13px;">github flow</a> <a href="/tags/git%E6%B5%81%E7%A8%8B/" style="font-size: 13px;">git流程</a> <a href="/tags/git%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/" style="font-size: 13px;">git软件开发过程</a> <a href="/tags/jekyll/" style="font-size: 13px;">jekyll</a> <a href="/tags/license/" style="font-size: 13px;">license</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/markdown%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13px;">markdown基础知识</a> <a href="/tags/middleman/" style="font-size: 13px;">middleman</a> <a href="/tags/mike-flow/" style="font-size: 13px;">mike flow</a> <a href="/tags/openfire/" style="font-size: 13px;">openfire</a> <a href="/tags/openfire-plugin/" style="font-size: 13px;">openfire plugin</a> <a href="/tags/opensource/" style="font-size: 13px;">opensource</a> <a href="/tags/parallel-computing/" style="font-size: 13px;">parallel computing</a> <a href="/tags/performance-monitor/" style="font-size: 13px;">performance monitor</a> <a href="/tags/php/" style="font-size: 13px;">php</a> <a href="/tags/php-linux-%E5%AE%89%E8%A3%85/" style="font-size: 13px;">php linux 安装</a> <a href="/tags/php%E5%AE%89%E8%A3%85/" style="font-size: 13px;">php安装</a> <a href="/tags/presswork%E9%9D%A2%E5%8C%85%E5%B1%91/" style="font-size: 13px;">presswork面包屑</a> <a href="/tags/principles/" style="font-size: 13px;">principles</a> <a href="/tags/project-manage/" style="font-size: 13px;">project manage</a> <a href="/tags/protocol/" style="font-size: 13px;">protocol</a> <a href="/tags/specification/" style="font-size: 13px;">specification</a> <a href="/tags/sublime-text/" style="font-size: 13px;">sublime text</a> <a href="/tags/wordpress/" style="font-size: 13px;">wordpress</a> <a href="/tags/wordpress-%E4%B8%BB%E9%A2%98/" style="font-size: 13px;">wordpress 主题</a> <a href="/tags/xdebug/" style="font-size: 13px;">xdebug</a> <a href="/tags/xrebel/" style="font-size: 13px;">xrebel</a> <a href="/tags/%E4%B8%8A%E6%B5%B7/" style="font-size: 13px;">上海</a> <a href="/tags/%E4%B8%8A%E6%B5%B7%E5%8D%8E%E4%B8%9C%E5%B8%88%E5%A4%A7/" style="font-size: 13px;">上海华东师大</a> <a href="/tags/%E4%B8%AD%E5%AD%A6%E7%A4%BE%E4%BC%9A%E5%AE%9E%E8%B7%B5/" style="font-size: 13px;">中学社会实践</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E5%B8%82%E5%9C%BA/" style="font-size: 13px;">互联网市场</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E8%90%A5%E9%94%80/" style="font-size: 13px;">互联网营销</a> <a href="/tags/%E5%8D%97%E4%BA%AC%E5%A5%A5%E4%BD%93%E4%B8%AD%E5%BF%83/" style="font-size: 13px;">南京奥体中心</a> <a href="/tags/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C/" style="font-size: 13px;">南京总统府</a> <a href="/tags/%E5%8D%97%E4%BA%AC%E6%97%85%E6%B8%B8%E6%99%AF%E7%82%B9/" style="font-size: 13px;">南京旅游景点</a> <a href="/tags/%E5%A4%A7%E5%AD%A6/" style="font-size: 13px;">大学</a> <a href="/tags/%E5%A4%A7%E5%AD%A6%E5%86%9B%E8%AE%AD/" style="font-size: 13.25px;">大学军训</a> <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/" style="font-size: 13.5px;">大学生活</a> <a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 13px;">年度总结</a> <a href="/tags/%E6%8C%89%E4%BD%8D%E4%B8%8E/" style="font-size: 13px;">按位与</a> <a href="/tags/%E6%8C%89%E4%BD%8D%E6%88%96/" style="font-size: 13px;">按位或</a> <a href="/tags/%E6%8E%A8%E5%B9%BF/" style="font-size: 13px;">推广</a> <a href="/tags/%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE/" style="font-size: 13px;">改革开放</a> <a href="/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/" style="font-size: 13px;">方法调用</a> <a href="/tags/%E6%A0%87%E7%AD%BE1/" style="font-size: 13px;">标签1</a> <a href="/tags/%E6%A6%9C%E6%A0%B7/" style="font-size: 13px;">榜样</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%81%B5%E8%B0%B7%E5%AF%BA/" style="font-size: 13px;">灵谷寺</a> <a href="/tags/%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" style="font-size: 13px;">版本发布</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 13px;">生活</a> <a href="/tags/%E7%A0%94%E5%8F%91%E4%BA%BA%E8%A7%82%E7%82%B9/" style="font-size: 13px;">研发人观点</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E6%83%85%E8%B0%83%E6%9F%A5/" style="font-size: 13px;">社会实情调查</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/" style="font-size: 13px;">系统运维</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E5%87%86%E5%88%99/" style="font-size: 13px;">编程准则</a> <a href="/tags/%E8%A7%84%E5%88%92%E9%A1%B9%E7%9B%AE%E6%97%A5%E7%A8%8B/" style="font-size: 13px;">规划项目日程</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 13px;">读书笔记</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC/" style="font-size: 13px;">软件版本</a> <a href="/tags/%E9%92%9F%E5%B1%B1%E9%A3%8E%E6%99%AF%E5%8C%BA/" style="font-size: 13px;">钟山风景区</a> <a href="/tags/%E9%99%86%E5%AE%B6%E5%98%B4/" style="font-size: 13px;">陆家嘴</a> <a href="/tags/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86/" style="font-size: 14px;">青春记忆</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/" style="font-size: 13.75px;">面向对象设计</a> <a href="/tags/%E9%9F%B3%E4%B9%90%E4%B9%8B%E6%97%85/" style="font-size: 13px;">音乐之旅</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" style="font-size: 13.25px;">项目管理</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">七月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">六月 2014</a><span class="archive-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-21T08:08:32.893Z" itemprop="datePublished">2020-06-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2017/05/16/programming-principles/" class="title">Programming Principles(编程准则)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-05-16T01:00:00.000Z" itemprop="datePublished">2017-05-16</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2016/12/19/parallel-of-buying-scenario/" class="title">并发场景实践方案优劣评析</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2016-12-19T01:00:00.000Z" itemprop="datePublished">2016-12-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E7%8E%AF%E5%A2%83/">工具环境</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2016/12/06/git-fetch-among-branch/" class="title">Git协作之合并代码</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2016-12-06T01:00:00.000Z" itemprop="datePublished">2016-12-06</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2016/12/02/funny-function-invoking-logic/" class="title">几种方法调用思路的比较</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2016-12-02T01:00:00.000Z" itemprop="datePublished">2016-12-02</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  <main class="main" role="main">
+  <article class="content article article-tags post-type-list" itemscope="">
+    <header class="article-header">
+      <h1 itemprop="name" class="hidden-xs">标签: 正则表达式</h1>
+      <p class="text-muted hidden-xs">共 1 篇文章</p>
+      <nav role="navigation" id="nav-main" class="okayNav">
+        <ul>
+          <li><a href="/tags">All</a></li>
+          
+          <li><a href="/tags/PHP/">PHP</a></li>
+          
+          <li><a href="/tags/面向对象设计/">面向对象设计</a></li>
+          
+          <li><a href="/tags/Git/">Git</a></li>
+          
+          <li><a href="/tags/Java/">Java</a></li>
+          
+          <li><a href="/tags/项目管理/">项目管理</a></li>
+          
+          <li><a href="/tags/生活/">生活</a></li>
+          
+          <li><a href="/tags/系统运维/">系统运维</a></li>
+          
+          <li><a href="/tags/Sitemap-Protocol/">Sitemap Protocol</a></li>
+          
+          <li><a href="/tags/wordpress/">wordpress</a></li>
+          
+          <li><a href="/tags/apache-linux-安装/">apache linux 安装</a></li>
+          
+          <li><a href="/tags/Apache安装/">Apache安装</a></li>
+          
+          <li><a href="/tags/LAMP环境搭建/">LAMP环境搭建</a></li>
+          
+          <li><a href="/tags/php安装/">php安装</a></li>
+          
+          <li><a href="/tags/WAMP/">WAMP</a></li>
+          
+          <li><a href="/tags/Linux/">Linux</a></li>
+          
+          <li><a href="/tags/Linux用户/">Linux用户</a></li>
+          
+          <li><a href="/tags/Build-System/">Build System</a></li>
+          
+          <li><a href="/tags/sublime-text/">sublime text</a></li>
+          
+          <li><a href="/tags/php-linux-安装/">php linux 安装</a></li>
+          
+          <li><a href="/tags/2014年南京青奥会/">2014年南京青奥会</a></li>
+          
+          <li><a href="/tags/南京奥体中心/">南京奥体中心</a></li>
+          
+          <li><a href="/tags/markdown/">markdown</a></li>
+          
+          <li><a href="/tags/markdown基础知识/">markdown基础知识</a></li>
+          
+          <li><a href="/tags/presswork面包屑/">presswork面包屑</a></li>
+          
+          <li><a href="/tags/wordpress-主题/">wordpress 主题</a></li>
+          
+          <li><a href="/tags/JAVA-Switch/">JAVA Switch</a></li>
+          
+          <li><a href="/tags/Switch语句/">Switch语句</a></li>
+          
+          <li><a href="/tags/ServerAlias/">ServerAlias</a></li>
+          
+          <li><a href="/tags/ServerName/">ServerName</a></li>
+          
+          <li><a href="/tags/版本发布/">版本发布</a></li>
+          
+          <li><a href="/tags/软件版本/">软件版本</a></li>
+          
+          <li><a href="/tags/上海/">上海</a></li>
+          
+          <li><a href="/tags/上海华东师大/">上海华东师大</a></li>
+          
+          <li><a href="/tags/陆家嘴/">陆家嘴</a></li>
+          
+          <li><a href="/tags/灵谷寺/">灵谷寺</a></li>
+          
+          <li><a href="/tags/钟山风景区/">钟山风景区</a></li>
+          
+          <li><a href="/tags/南京总统府/">南京总统府</a></li>
+          
+          <li><a href="/tags/南京旅游景点/">南京旅游景点</a></li>
+          
+          <li><a href="/tags/大学军训/">大学军训</a></li>
+          
+          <li><a href="/tags/青春记忆/">青春记忆</a></li>
+          
+          <li><a href="/tags/年度总结/">年度总结</a></li>
+          
+          <li><a href="/tags/读书笔记/">读书笔记</a></li>
+          
+          <li><a href="/tags/大学/">大学</a></li>
+          
+          <li><a href="/tags/大学生活/">大学生活</a></li>
+          
+          <li><a href="/tags/音乐之旅/">音乐之旅</a></li>
+          
+          <li><a href="/tags/改革开放/">改革开放</a></li>
+          
+          <li><a href="/tags/榜样/">榜样</a></li>
+          
+          <li><a href="/tags/openfire/">openfire</a></li>
+          
+          <li><a href="/tags/openfire-plugin/">openfire plugin</a></li>
+          
+          <li><a href="/tags/正则表达式/">正则表达式</a></li>
+          
+          <li><a href="/tags/2004儋州旱情/">2004儋州旱情</a></li>
+          
+          <li><a href="/tags/中学社会实践/">中学社会实践</a></li>
+          
+          <li><a href="/tags/社会实情调查/">社会实情调查</a></li>
+          
+          <li><a href="/tags/互联网市场/">互联网市场</a></li>
+          
+          <li><a href="/tags/互联网营销/">互联网营销</a></li>
+          
+          <li><a href="/tags/推广/">推广</a></li>
+          
+          <li><a href="/tags/研发人观点/">研发人观点</a></li>
+          
+          <li><a href="/tags/git-flow/">git flow</a></li>
+          
+          <li><a href="/tags/github-flow/">github flow</a></li>
+          
+          <li><a href="/tags/git流程/">git流程</a></li>
+          
+          <li><a href="/tags/git软件开发过程/">git软件开发过程</a></li>
+          
+          <li><a href="/tags/mike-flow/">mike flow</a></li>
+          
+          <li><a href="/tags/project-manage/">project manage</a></li>
+          
+          <li><a href="/tags/规划项目日程/">规划项目日程</a></li>
+          
+          <li><a href="/tags/middleman/">middleman</a></li>
+          
+          <li><a href="/tags/jekyll/">jekyll</a></li>
+          
+          <li><a href="/tags/architecture/">architecture</a></li>
+          
+          <li><a href="/tags/opensource/">opensource</a></li>
+          
+          <li><a href="/tags/license/">license</a></li>
+          
+          <li><a href="/tags/fastjson/">fastjson</a></li>
+          
+          <li><a href="/tags/php/">php</a></li>
+          
+          <li><a href="/tags/xdebug/">xdebug</a></li>
+          
+          <li><a href="/tags/xrebel/">xrebel</a></li>
+          
+          <li><a href="/tags/performance-monitor/">performance monitor</a></li>
+          
+          <li><a href="/tags/protocol/">protocol</a></li>
+          
+          <li><a href="/tags/specification/">specification</a></li>
+          
+          <li><a href="/tags/Database/">Database</a></li>
+          
+          <li><a href="/tags/方法调用/">方法调用</a></li>
+          
+          <li><a href="/tags/按位与/">按位与</a></li>
+          
+          <li><a href="/tags/按位或/">按位或</a></li>
+          
+          <li><a href="/tags/Git分支合并/">Git分支合并</a></li>
+          
+          <li><a href="/tags/feature-toggle/">feature toggle</a></li>
+          
+          <li><a href="/tags/parallel-computing/">parallel computing</a></li>
+          
+          <li><a href="/tags/concurrency/">concurrency</a></li>
+          
+          <li><a href="/tags/标签1/">标签1</a></li>
+          
+          <li><a href="/tags/编程准则/">编程准则</a></li>
+          
+          <li><a href="/tags/principles/">principles</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <!-- /header -->
+    <div class="article-body">
+      <div class="row">
+        
+<div class="col-md-6">
+    
+<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="panel-body">
+     <div class="article-meta">
+       <time datetime="2015-06-11T01:32:00.000Z" itemprop="datePublished">2015-06-11</time>
+     </div>
+     <h3 class="article-title" itemprop="name">
+       <a class="article-link" href="/posts/2015/06/11/php-regular-expression/">PHP正则表达式</a>
+     </h3>
+   </div>
+   
+   <div class="panel-footer">
+     
+      <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="label label-default mb">正则表达式</a>
+     
+     
+   </div>
+   
+</article>
+
+
+</div>
+
+      </div>
+    </div>
+  </article>
+   
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/jeromechan" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.linkedin.com/in/chenjinlong/" target="_blank" title="Linkedin" data-toggle=tooltip data-placement=top><i class="icon icon-linkedin"></i></a></li>
+        
+        <li><a href="https://twitter.com/jeromechan369" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="http://weibo.com/5812529126" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2013-2020 Jerome Chan
+        
+<!--        <div class="publishby">-->
+<!--        	< %= __('copyright.theme_by') % > <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.-->
+<!--        </div>-->
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
