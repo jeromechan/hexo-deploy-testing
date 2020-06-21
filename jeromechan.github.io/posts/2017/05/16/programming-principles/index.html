@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Programming Principles(编程准则) | Jerome.明允的个人博客</title>
+  <meta name="description" content="编程准则,programming principles">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Programming Principles(编程准则)">
+<meta property="og:url" content="http://yoursite.com/posts/2017/05/16/programming-principles/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="编程准则,programming principles">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-05-16T01:00:00.000Z">
+<meta property="article:modified_time" content="2020-06-20T20:43:12.755Z">
+<meta property="article:author" content="Jerome Chan">
+<meta property="article:tag" content="编程准则">
+<meta property="article:tag" content="programming principles">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://yoursite.com/posts/2017/05/16/programming-principles/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/jeromechan" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Jerome.明允</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">to be a fantastic programmer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Hainan, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          
+            <a href="/.">
+          
+              
+                <i class="icon icon-home-fill"></i>
+              
+              <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          
+            <a href="/archives">
+          
+              
+                <i class="icon icon-archives-fill"></i>
+              
+              <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          
+            <a href="/categories">
+          
+              
+                <i class="icon icon-folder"></i>
+              
+              <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          
+            <a href="/tags">
+          
+              
+                <i class="icon icon-tags"></i>
+              
+              <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          
+            <a href="/repository">
+          
+              
+                <i class="icon icon-project"></i>
+              
+              <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          
+            <a href="/books">
+          
+              
+                <i class="icon icon-book-fill"></i>
+              
+              <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          
+            <a href="/links">
+          
+              
+                <i class="icon icon-friendship"></i>
+              
+              <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          
+            <a href="https://www.linkedin.com/in/chenjinlong/" target="_blank" rel="noopener">
+          
+              
+                <i class="icon icon-cup-fill"></i>
+              
+              <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/jeromechan" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.linkedin.com/in/chenjinlong/" target="_blank" title="Linkedin" data-toggle=tooltip data-placement=top><i class="icon icon-linkedin"></i></a></li>
+        
+        <li><a href="https://twitter.com/jeromechan369" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="http://weibo.com/5812529126" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E7%8E%AF%E5%A2%83/">工具环境</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%85%E8%A1%8C%E6%91%84%E5%BD%B1/">旅行摄影</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%A1%E7%90%86%E5%93%B2%E5%AD%A6/">管理哲学</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><span class="category-list-count">15</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2004%E5%84%8B%E5%B7%9E%E6%97%B1%E6%83%85/" rel="tag">2004儋州旱情</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2014%E5%B9%B4%E5%8D%97%E4%BA%AC%E9%9D%92%E5%A5%A5%E4%BC%9A/" rel="tag">2014年南京青奥会</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache%E5%AE%89%E8%A3%85/" rel="tag">Apache安装</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Build-System/" rel="tag">Build System</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/" rel="tag">Git分支合并</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA-Switch/" rel="tag">JAVA Switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LAMP%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">LAMP环境搭建</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E7%94%A8%E6%88%B7/" rel="tag">Linux用户</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ServerAlias/" rel="tag">ServerAlias</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ServerName/" rel="tag">ServerName</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sitemap-Protocol/" rel="tag">Sitemap Protocol</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Switch%E8%AF%AD%E5%8F%A5/" rel="tag">Switch语句</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WAMP/" rel="tag">WAMP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apache-linux-%E5%AE%89%E8%A3%85/" rel="tag">apache linux 安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/" rel="tag">architecture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/concurrency/" rel="tag">concurrency</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fastjson/" rel="tag">fastjson</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/feature-toggle/" rel="tag">feature toggle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-flow/" rel="tag">git flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-flow/" rel="tag">github flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E6%B5%81%E7%A8%8B/" rel="tag">git流程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/" rel="tag">git软件开发过程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/" rel="tag">jekyll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/license/" rel="tag">license</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag">markdown基础知识</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleman/" rel="tag">middleman</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mike-flow/" rel="tag">mike flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openfire/" rel="tag">openfire</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openfire-plugin/" rel="tag">openfire plugin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/" rel="tag">opensource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parallel-computing/" rel="tag">parallel computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance-monitor/" rel="tag">performance monitor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php-linux-%E5%AE%89%E8%A3%85/" rel="tag">php linux 安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php%E5%AE%89%E8%A3%85/" rel="tag">php安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/presswork%E9%9D%A2%E5%8C%85%E5%B1%91/" rel="tag">presswork面包屑</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/principles/" rel="tag">principles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project-manage/" rel="tag">project manage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/protocol/" rel="tag">protocol</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/specification/" rel="tag">specification</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime-text/" rel="tag">sublime text</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/" rel="tag">wordpress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress-%E4%B8%BB%E9%A2%98/" rel="tag">wordpress 主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xdebug/" rel="tag">xdebug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xrebel/" rel="tag">xrebel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7/" rel="tag">上海</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E6%B5%B7%E5%8D%8E%E4%B8%9C%E5%B8%88%E5%A4%A7/" rel="tag">上海华东师大</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%AD%A6%E7%A4%BE%E4%BC%9A%E5%AE%9E%E8%B7%B5/" rel="tag">中学社会实践</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E5%B8%82%E5%9C%BA/" rel="tag">互联网市场</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E8%90%A5%E9%94%80/" rel="tag">互联网营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%97%E4%BA%AC%E5%A5%A5%E4%BD%93%E4%B8%AD%E5%BF%83/" rel="tag">南京奥体中心</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C/" rel="tag">南京总统府</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%97%E4%BA%AC%E6%97%85%E6%B8%B8%E6%99%AF%E7%82%B9/" rel="tag">南京旅游景点</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%AD%A6/" rel="tag">大学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%AD%A6%E5%86%9B%E8%AE%AD/" rel="tag">大学军训</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/" rel="tag">大学生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" rel="tag">年度总结</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%89%E4%BD%8D%E4%B8%8E/" rel="tag">按位与</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%89%E4%BD%8D%E6%88%96/" rel="tag">按位或</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%A8%E5%B9%BF/" rel="tag">推广</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE/" rel="tag">改革开放</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/" rel="tag">方法调用</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%87%E7%AD%BE1/" rel="tag">标签1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A6%9C%E6%A0%B7/" rel="tag">榜样</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%81%B5%E8%B0%B7%E5%AF%BA/" rel="tag">灵谷寺</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" rel="tag">版本发布</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A0%94%E5%8F%91%E4%BA%BA%E8%A7%82%E7%82%B9/" rel="tag">研发人观点</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E6%83%85%E8%B0%83%E6%9F%A5/" rel="tag">社会实情调查</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/" rel="tag">系统运维</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E5%87%86%E5%88%99/" rel="tag">编程准则</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%84%E5%88%92%E9%A1%B9%E7%9B%AE%E6%97%A5%E7%A8%8B/" rel="tag">规划项目日程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC/" rel="tag">软件版本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%92%9F%E5%B1%B1%E9%A3%8E%E6%99%AF%E5%8C%BA/" rel="tag">钟山风景区</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%86%E5%AE%B6%E5%98%B4/" rel="tag">陆家嘴</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86/" rel="tag">青春记忆</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/" rel="tag">面向对象设计</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E4%B9%90%E4%B9%8B%E6%97%85/" rel="tag">音乐之旅</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/2004%E5%84%8B%E5%B7%9E%E6%97%B1%E6%83%85/" style="font-size: 13px;">2004儋州旱情</a> <a href="/tags/2014%E5%B9%B4%E5%8D%97%E4%BA%AC%E9%9D%92%E5%A5%A5%E4%BC%9A/" style="font-size: 13px;">2014年南京青奥会</a> <a href="/tags/Apache%E5%AE%89%E8%A3%85/" style="font-size: 13.25px;">Apache安装</a> <a href="/tags/Build-System/" style="font-size: 13px;">Build System</a> <a href="/tags/Database/" style="font-size: 13px;">Database</a> <a href="/tags/Git/" style="font-size: 13.5px;">Git</a> <a href="/tags/Git%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6/" style="font-size: 13px;">Git分支合并</a> <a href="/tags/JAVA-Switch/" style="font-size: 13px;">JAVA Switch</a> <a href="/tags/Java/" style="font-size: 13px;">Java</a> <a href="/tags/LAMP%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" style="font-size: 13.25px;">LAMP环境搭建</a> <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/Linux%E7%94%A8%E6%88%B7/" style="font-size: 13px;">Linux用户</a> <a href="/tags/PHP/" style="font-size: 13.25px;">PHP</a> <a href="/tags/ServerAlias/" style="font-size: 13px;">ServerAlias</a> <a href="/tags/ServerName/" style="font-size: 13px;">ServerName</a> <a href="/tags/Sitemap-Protocol/" style="font-size: 13px;">Sitemap Protocol</a> <a href="/tags/Switch%E8%AF%AD%E5%8F%A5/" style="font-size: 13px;">Switch语句</a> <a href="/tags/WAMP/" style="font-size: 13px;">WAMP</a> <a href="/tags/apache-linux-%E5%AE%89%E8%A3%85/" style="font-size: 13px;">apache linux 安装</a> <a href="/tags/architecture/" style="font-size: 13px;">architecture</a> <a href="/tags/concurrency/" style="font-size: 13px;">concurrency</a> <a href="/tags/fastjson/" style="font-size: 13px;">fastjson</a> <a href="/tags/feature-toggle/" style="font-size: 13px;">feature toggle</a> <a href="/tags/git-flow/" style="font-size: 13px;">git flow</a> <a href="/tags/github-flow/" style="font-size: 13px;">github flow</a> <a href="/tags/git%E6%B5%81%E7%A8%8B/" style="font-size: 13px;">git流程</a> <a href="/tags/git%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B/" style="font-size: 13px;">git软件开发过程</a> <a href="/tags/jekyll/" style="font-size: 13px;">jekyll</a> <a href="/tags/license/" style="font-size: 13px;">license</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/markdown%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 13px;">markdown基础知识</a> <a href="/tags/middleman/" style="font-size: 13px;">middleman</a> <a href="/tags/mike-flow/" style="font-size: 13px;">mike flow</a> <a href="/tags/openfire/" style="font-size: 13px;">openfire</a> <a href="/tags/openfire-plugin/" style="font-size: 13px;">openfire plugin</a> <a href="/tags/opensource/" style="font-size: 13px;">opensource</a> <a href="/tags/parallel-computing/" style="font-size: 13px;">parallel computing</a> <a href="/tags/performance-monitor/" style="font-size: 13px;">performance monitor</a> <a href="/tags/php/" style="font-size: 13px;">php</a> <a href="/tags/php-linux-%E5%AE%89%E8%A3%85/" style="font-size: 13px;">php linux 安装</a> <a href="/tags/php%E5%AE%89%E8%A3%85/" style="font-size: 13px;">php安装</a> <a href="/tags/presswork%E9%9D%A2%E5%8C%85%E5%B1%91/" style="font-size: 13px;">presswork面包屑</a> <a href="/tags/principles/" style="font-size: 13px;">principles</a> <a href="/tags/project-manage/" style="font-size: 13px;">project manage</a> <a href="/tags/protocol/" style="font-size: 13px;">protocol</a> <a href="/tags/specification/" style="font-size: 13px;">specification</a> <a href="/tags/sublime-text/" style="font-size: 13px;">sublime text</a> <a href="/tags/wordpress/" style="font-size: 13px;">wordpress</a> <a href="/tags/wordpress-%E4%B8%BB%E9%A2%98/" style="font-size: 13px;">wordpress 主题</a> <a href="/tags/xdebug/" style="font-size: 13px;">xdebug</a> <a href="/tags/xrebel/" style="font-size: 13px;">xrebel</a> <a href="/tags/%E4%B8%8A%E6%B5%B7/" style="font-size: 13px;">上海</a> <a href="/tags/%E4%B8%8A%E6%B5%B7%E5%8D%8E%E4%B8%9C%E5%B8%88%E5%A4%A7/" style="font-size: 13px;">上海华东师大</a> <a href="/tags/%E4%B8%AD%E5%AD%A6%E7%A4%BE%E4%BC%9A%E5%AE%9E%E8%B7%B5/" style="font-size: 13px;">中学社会实践</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E5%B8%82%E5%9C%BA/" style="font-size: 13px;">互联网市场</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91%E8%90%A5%E9%94%80/" style="font-size: 13px;">互联网营销</a> <a href="/tags/%E5%8D%97%E4%BA%AC%E5%A5%A5%E4%BD%93%E4%B8%AD%E5%BF%83/" style="font-size: 13px;">南京奥体中心</a> <a href="/tags/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C/" style="font-size: 13px;">南京总统府</a> <a href="/tags/%E5%8D%97%E4%BA%AC%E6%97%85%E6%B8%B8%E6%99%AF%E7%82%B9/" style="font-size: 13px;">南京旅游景点</a> <a href="/tags/%E5%A4%A7%E5%AD%A6/" style="font-size: 13px;">大学</a> <a href="/tags/%E5%A4%A7%E5%AD%A6%E5%86%9B%E8%AE%AD/" style="font-size: 13.25px;">大学军训</a> <a href="/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/" style="font-size: 13.5px;">大学生活</a> <a href="/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 13px;">年度总结</a> <a href="/tags/%E6%8C%89%E4%BD%8D%E4%B8%8E/" style="font-size: 13px;">按位与</a> <a href="/tags/%E6%8C%89%E4%BD%8D%E6%88%96/" style="font-size: 13px;">按位或</a> <a href="/tags/%E6%8E%A8%E5%B9%BF/" style="font-size: 13px;">推广</a> <a href="/tags/%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE/" style="font-size: 13px;">改革开放</a> <a href="/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/" style="font-size: 13px;">方法调用</a> <a href="/tags/%E6%A0%87%E7%AD%BE1/" style="font-size: 13px;">标签1</a> <a href="/tags/%E6%A6%9C%E6%A0%B7/" style="font-size: 13px;">榜样</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%81%B5%E8%B0%B7%E5%AF%BA/" style="font-size: 13px;">灵谷寺</a> <a href="/tags/%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" style="font-size: 13px;">版本发布</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 13px;">生活</a> <a href="/tags/%E7%A0%94%E5%8F%91%E4%BA%BA%E8%A7%82%E7%82%B9/" style="font-size: 13px;">研发人观点</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E5%AE%9E%E6%83%85%E8%B0%83%E6%9F%A5/" style="font-size: 13px;">社会实情调查</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/" style="font-size: 13px;">系统运维</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E5%87%86%E5%88%99/" style="font-size: 13px;">编程准则</a> <a href="/tags/%E8%A7%84%E5%88%92%E9%A1%B9%E7%9B%AE%E6%97%A5%E7%A8%8B/" style="font-size: 13px;">规划项目日程</a> <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 13px;">读书笔记</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC/" style="font-size: 13px;">软件版本</a> <a href="/tags/%E9%92%9F%E5%B1%B1%E9%A3%8E%E6%99%AF%E5%8C%BA/" style="font-size: 13px;">钟山风景区</a> <a href="/tags/%E9%99%86%E5%AE%B6%E5%98%B4/" style="font-size: 13px;">陆家嘴</a> <a href="/tags/%E9%9D%92%E6%98%A5%E8%AE%B0%E5%BF%86/" style="font-size: 14px;">青春记忆</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/" style="font-size: 13.75px;">面向对象设计</a> <a href="/tags/%E9%9F%B3%E4%B9%90%E4%B9%8B%E6%97%85/" style="font-size: 13px;">音乐之旅</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" style="font-size: 13.25px;">项目管理</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">七月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">六月 2014</a><span class="archive-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-20T15:29:33.909Z" itemprop="datePublished">2020-06-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2017/05/16/programming-principles/" class="title">Programming Principles(编程准则)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-05-16T01:00:00.000Z" itemprop="datePublished">2017-05-16</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2016/12/19/parallel-of-buying-scenario/" class="title">并发场景实践方案优劣评析</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2016-12-19T01:00:00.000Z" itemprop="datePublished">2016-12-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7%E7%8E%AF%E5%A2%83/">工具环境</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2016/12/06/git-fetch-among-branch/" class="title">Git协作之合并代码</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2016-12-06T01:00:00.000Z" itemprop="datePublished">2016-12-06</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/2016/12/02/funny-function-invoking-logic/" class="title">几种方法调用思路的比较</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2016-12-02T01:00:00.000Z" itemprop="datePublished">2016-12-02</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-/2017/05/16/programming-principles/" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Programming Principles(编程准则)
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/2017/05/16/programming-principles/" class="article-date">
+	  <time datetime="2017-05-16T01:00:00.000Z" itemprop="datePublished">2017-05-16</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">架构设计</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/principles/" rel="tag">principles</a>, <a class="article-tag-link" href="/tags/%E7%BC%96%E7%A8%8B%E5%87%86%E5%88%99/" rel="tag">编程准则</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/2017/05/16/programming-principles/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文已开源发布在这里<a href="https://github.com/jeromechan/programming-principles-cn" target="_blank" rel="noopener">“Programming Priciples-中文版”</a><br>如果觉得还不错，可以在<a href="https://github.com/jeromechan/programming-principles-cn" target="_blank" rel="noopener">GitHub</a>给本文章标星☆鼓励</p>
+</blockquote>
+<p>Every programmer benefits from understanding programming principles and patterns. This overview is a reference for myself, and I’ve just put it here. Maybe it is of help to you during design, discussion, or review. Please note that it’s far from complete, and that you often need to make trade-offs between conflicting principles.</p>
+<p>每一位开发者都可以从编程准则和模式的学习上获益。这一篇概览性质的参考资料是为自己总结的，现在把它分享在这里。或许它可以在设计、探讨、评审的过程中给予你帮助。不过也请您知晓，它距离完整还差很多，所以在平时使用的过程中，你需要自己去分辨这些编程准则之间的冲突与不同，以便更好地应用于实践当中。</p>
+<p>The list was inspired by <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=331531" target="_blank" rel="noopener">The Principles of Good Programming</a>. I felt that the list closely, but not completely matches what I would personally put into something similar. Additionally, I wanted a bit more reasoning, details, and links to further resources. <a href="https://github.com/webpro/programming-principles/issues" target="_blank" rel="noopener">Let me know</a> if you have any feedback or suggestions for improvement.</p>
+<p>这份列表的灵感来源于这篇文章<a href="http://www.artima.com/weblogs/viewpost.jsp?thread=331531" target="_blank" rel="noopener">The Principles of Good Programming</a>。我感觉到这篇文章描述的内容与本篇非常地相似，但是和我想要阐述的却是相近而不相同。所以额外的，我希望在这些准则的阐述过程中，包含更多的关于应用原因、细节的描述以及深入解读的资料超链接。如果你有建议或者有问题需要反馈，可以提issues给我<a href="https://github.com/webpro/programming-principles/issues" target="_blank" rel="noopener">Let me know</a>。</p>
+<h3 id="Generic"><a href="#Generic" class="headerlink" title="Generic"></a>Generic</h3><h3 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h3><ul>
+<li><a href="#kiss">KISS (Keep It Simple Stupid)</a></li>
+<li><a href="#KISS准则">KISS准则 (保持简单和傻瓜式)</a></li>
+<li><a href="#yagni">YAGNI (You aren’t gonna need it)</a></li>
+<li><a href="#YAGNI准则">YAGNI准则 (直到你使用之前都不要实现它)</a></li>
+<li><a href="#do-the-simplest-thing-that-could-possibly-work">Do The Simplest Thing That Could Possibly Work</a></li>
+<li><a href="#做最简单最可能实现的事情">做最简单最可能实现的事情</a></li>
+<li><a href="#separation-of-concerns">Separation of Concerns</a></li>
+<li><a href="#关注点分离">关注点分离</a></li>
+<li><a href="#keep-things-dry">Keep Things DRY</a></li>
+<li><a href="#DRY原则">DRY原则 (不要重复你所做过的事情)</a></li>
+<li><a href="#code-for-the-maintainer">Code For The Maintainer</a></li>
+<li><a href="#编写可维护的代码">编写可维护的代码</a></li>
+<li><a href="#avoid-premature-optimization">Avoid Premature Optimization</a></li>
+<li><a href="#避免过度过早优化">避免过度过早优化</a></li>
+<li><a href="#boy-scout-rule">Boy-Scout Rule</a></li>
+<li><a href="#美国童子军准则">美国童子军准则</a></li>
+</ul>
+<h3 id="Inter-Module-Class"><a href="#Inter-Module-Class" class="headerlink" title="Inter-Module/Class"></a>Inter-Module/Class</h3><h3 id="内部模块-类"><a href="#内部模块-类" class="headerlink" title="内部模块/类"></a>内部模块/类</h3><ul>
+<li><a href="#minimise-coupling">Minimise Coupling</a></li>
+<li><a href="#低耦合">低耦合</a></li>
+<li><a href="#law-of-demeter">Law of Demeter</a></li>
+<li><a href="#迪米特法则">迪米特法则</a></li>
+<li><a href="#composition-over-inheritance">Composition Over Inheritance</a></li>
+<li><a href="#组合优于继承">组合优于继承</a></li>
+<li><a href="#orthogonality">Orthogonality</a></li>
+<li><a href="#正交性">正交性</a></li>
+<li>[Robustness Principle](#Robustness Principle)</li>
+<li><a href="#健壮性原则">健壮性原则</a></li>
+</ul>
+<h3 id="Module-Class"><a href="#Module-Class" class="headerlink" title="Module/Class"></a>Module/Class</h3><h3 id="模块-类"><a href="#模块-类" class="headerlink" title="模块/类"></a>模块/类</h3><ul>
+<li><a href="#maximise-cohesion">Maximise Cohesion</a></li>
+<li><a href="#高内聚">高内聚</a></li>
+<li><a href="#liskov-substitution-principle">Liskov Substitution Principle</a></li>
+<li><a href="#里氏替换原则">里氏替换原则</a></li>
+<li><a href="#openclosed-principle">Open/Closed Principle</a></li>
+<li><a href="#开闭原则">开闭原则</a></li>
+<li><a href="#single-responsibility-principle">Single Responsibility Principle</a></li>
+<li><a href="#单一职责原则">单一职责原则</a></li>
+<li><a href="#hide-implementation-details">Hide Implementation Details</a></li>
+<li><a href="#隐藏实现细节">隐藏实现细节</a></li>
+<li><a href="#curlys-law">Curly’s Law</a></li>
+<li><a href="#科里定律">科里定律</a></li>
+<li><a href="#encapsulate-what-changes">Encapsulate What Changes</a></li>
+<li><a href="#封装性">封装性</a></li>
+<li><a href="#interface-segregation-principle">Interface Segregation Principle</a></li>
+<li><a href="#接口隔离原则">接口隔离原则</a></li>
+<li><a href="#command-query-separation">Command Query Separation</a></li>
+<li><a href="#命令查询职责分离">命令查询职责分离</a></li>
+</ul>
+<h2 id="KISS"><a href="#KISS" class="headerlink" title="KISS"></a>KISS</h2><h2 id="KISS准则"><a href="#KISS准则" class="headerlink" title="KISS准则"></a>KISS准则</h2><p>Most systems work best if they are kept simple rather than made complex.</p>
+<p>如果能够保持系统简单复杂性低，那么大多数的系统都可以运行的很好。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Less code takes less time to write, has less bugs, and is easier to modify.</li>
+<li>更少的代码可以花费更少的编码时间、更少的bugs、更容易去修改。</li>
+<li>Simplicity is the ultimate sophistication.</li>
+<li>简洁的就是最好最复杂的。</li>
+<li>It seems that perfection is reached not when there is nothing left to add, but when there is nothing left to take away.</li>
+<li>完美度不仅表示已经没有什么需要新增，而且也表示着没有什么需要剔除。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/KISS_principle" target="_blank" rel="noopener">KISS principle</a></li>
+<li><a href="http://principles-wiki.net/principles:keep_it_simple_stupid" target="_blank" rel="noopener">Keep It Simple Stupid (KISS)</a></li>
+</ul>
+<h2 id="YAGNI"><a href="#YAGNI" class="headerlink" title="YAGNI"></a>YAGNI</h2><h2 id="YAGNI准则"><a href="#YAGNI准则" class="headerlink" title="YAGNI准则"></a>YAGNI准则</h2><p>YAGNI stands for “you aren’t gonna need it”: don’t implement something until it is necessary.</p>
+<p>YAGNI英文描述为 “you aren’t gonna need it”：直到使用之前都不要去实现它。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Any work that’s only used for a feature that’s needed tomorrow, means losing effort from features that need to be done for the current iteration.</li>
+<li>任何只用于明天所需要的功能的工作，意味着从当前所需要的功能中减去相应的工作量。</li>
+<li>It leads to code bloat; the software becomes larger and more complicated.</li>
+<li>意味着代码变得臃肿，软件变得更大更复杂。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Always implement things when you actually need them, never when you just foresee that you need them.</li>
+<li>只有在你真正需要的时候才去实现它，而不是根据你对于未来的估算和预测。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://c2.com/xp/YouArentGonnaNeedIt.html" target="_blank" rel="noopener">You Arent Gonna Need It</a></li>
+<li><a href="http://www.xprogramming.com/Practices/PracNotNeed.html" target="_blank" rel="noopener">You’re NOT gonna need it!</a></li>
+<li><a href="http://en.wikipedia.org/wiki/You_ain' target="_blank" rel="noopener"t_gonna_need_it">You ain’t gonna need it</a></li>
+</ul>
+<h2 id="Do-The-Simplest-Thing-That-Could-Possibly-Work"><a href="#Do-The-Simplest-Thing-That-Could-Possibly-Work" class="headerlink" title="Do The Simplest Thing That Could Possibly Work"></a>Do The Simplest Thing That Could Possibly Work</h2><h2 id="做最简单最可能实现的事情"><a href="#做最简单最可能实现的事情" class="headerlink" title="做最简单最可能实现的事情"></a>做最简单最可能实现的事情</h2><p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Real progress against the real problem is maximized if we just work on what the problem really is.</li>
+<li>如果我们努力解决问题的真正原因，那么对真正问题的积极进展就会被最大化。</li>
+</ul>
+<p>How<br>怎么办？</p>
+<ul>
+<li>Ask yourself: “What is the simplest thing that could possibly work?”</li>
+<li>常常询问自己：“最简单最根本的事情是什么？”</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://c2.com/xp/DoTheSimplestThingThatCouldPossiblyWork.html" target="_blank" rel="noopener">Do The Simplest Thing That Could Possibly Work</a></li>
+</ul>
+<h2 id="Separation-of-Concerns"><a href="#Separation-of-Concerns" class="headerlink" title="Separation of Concerns"></a>Separation of Concerns</h2><h2 id="关注点分离"><a href="#关注点分离" class="headerlink" title="关注点分离"></a>关注点分离</h2><p>Separation of concerns is a design principle for separating a computer program into distinct sections, such that each section addresses a separate concern. For example the business logic of the application is a concern and the user interface is another concern. Changing the user interface should not require changes to business logic and vice versa.</p>
+<p>关注点分离，是将计算机程序分成不同部分的设计原则，使每个部分都涉及到单独的问题。 例如，应用程序的业务逻辑是一个问题，用户界面是另一个问题。 更改用户界面不应要求对业务逻辑进行更改，反之亦然。</p>
+<p>Quoting <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra" target="_blank" rel="noopener">Edsger W. Dijkstra</a> (1974):</p>
+<p>引证 <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra" target="_blank" rel="noopener">Edsger W. Dijkstra</a> (1974):</p>
+<blockquote>
+<p>It is what I sometimes have called “the separation of concerns”, which, even if not perfectly possible, is yet the only available technique for effective ordering of one’s thoughts, that I know of. This is what I mean by “focusing one’s attention upon some aspect”: it does not mean ignoring the other aspects, it is just doing justice to the fact that from this aspect’s point of view, the other is irrelevant.<br>通常意义上所谈到的“关注点分离”，或许不是完全可能，我所知道的是它依然更多地依赖于个人对于事情场景的观点和想法。其实我所更想提及的是“把一个人的焦点放在某一个方面”：这并不意味着要忽略其他的方面，只是更多地期望能在关注的方面或者说角度上，找到根本的原因和事实，而不是其它不相关的部分。</p>
+</blockquote>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Simplify development and maintenance of software applications.</li>
+<li>简化软件应用的开发和维护工作。</li>
+<li>When concerns are well-separated, individual sections can be reused, as well as developed and updated independently.</li>
+<li>当关注点得到很好的分离，单独的部分可以被重用，那么开发和更新工作也将是相互独立的。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Break program functionality into separate modules that overlap as little as possible.</li>
+<li>将程序按照功能拆分为不同的模块，使之具备更低的重复率。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Separation_of_concerns" target="_blank" rel="noopener">Separation of Concerns</a></li>
+</ul>
+<h2 id="Keep-things-DRY"><a href="#Keep-things-DRY" class="headerlink" title="Keep things DRY"></a>Keep things DRY</h2><h2 id="DRY原则"><a href="#DRY原则" class="headerlink" title="DRY原则"></a>DRY原则</h2><p>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.</p>
+<p>在一个系统内，每一项知识点的表现必须是单一的，明确无歧义的，具备权威性的。</p>
+<p>Each significant piece of functionality in a program should be implemented in just one place in the source code. Where similar functions are carried out by distinct pieces of code, it is generally beneficial to combine them into one by abstracting out the varying parts.</p>
+<p>源代码中的每一项重要的程序功能只应该出现在一个地方。当我们遇到不同的代码段实现了相类似的功能，通常地，我们把不同的部分抽象出来，然后把相同的部分放在公共层，以实现更高的复用性。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Duplication (inadvertent or purposeful duplication) can lead to maintenance nightmares, poor factoring, and logical contradictions.</li>
+<li>重复代码（有意或无意的重复）会引发维护上的噩梦、较差的因果关系、逻辑矛盾。</li>
+<li>A modification of any single element of a system does not require a change in other logically unrelated elements.</li>
+<li>一个系统内单一元素的修改不涉及其他逻辑关联的元素的变更。</li>
+<li>Additionally, elements that are logically related all change predictably and uniformly, and are thus kept in sync.</li>
+<li>另，逻辑相关的元素的变化需要具有可预见性和一致性的，即需要保持同步性。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Put business rules, long expressions, if statements, math formulas, metadata, etc. in only one place.</li>
+<li>将业务规则、长表达式、条件语句、数学公式、元数据等放置到同一个地方。</li>
+<li>Identify the single, definitive source of every piece of knowledge used in your system, and then use that source to generate applicable instances of that knowledge (code, documentation, tests, etc).</li>
+<li>在系统的识别出每个知识点的单一来源，然后将这些知识点并应用于相同场景的实例当中（代码、文档、测试用例等）。</li>
+<li>Apply the <a href="http://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)" target="_blank" rel="noopener">Rule of three</a>.</li>
+<li>遵循规则<a href="http://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)" target="_blank" rel="noopener">Rule of three</a>。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://c2.com/cgi/wiki?DontRepeatYourself" target="_blank" rel="noopener">Dont Repeat Yourself</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Don' target="_blank" rel="noopener"t_repeat_yourself">Don’t repeat yourself</a></li>
+<li><a href="http://programmer.97things.oreilly.com/wiki/index.php/Don' target="_blank" rel="noopener"t_Repeat_Yourself">Don’t Repeat Yourself</a></li>
+</ul>
+<p>Related</p>
+<p>引用</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Abstraction_principle_(computer_programming)" target="_blank" rel="noopener">Abstraction principle</a></li>
+<li><a href="http://c2.com/cgi/wiki?OnceAndOnlyOnce" target="_blank" rel="noopener">Once And Only Once</a> is a subset of DRY (also referred to as the goal of refactoring).</li>
+<li><a href="http://en.wikipedia.org/wiki/Single_Source_of_Truth" target="_blank" rel="noopener">Single Source of Truth</a></li>
+<li>A violation of DRY is <a href="http://thedailywtf.com/articles/The-WET-Cart" target="_blank" rel="noopener">WET</a> (Write Everything Twice)</li>
+</ul>
+<h2 id="Code-For-The-Maintainer"><a href="#Code-For-The-Maintainer" class="headerlink" title="Code For The Maintainer"></a>Code For The Maintainer</h2><h2 id="编写可维护的代码"><a href="#编写可维护的代码" class="headerlink" title="编写可维护的代码"></a>编写可维护的代码</h2><p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Maintenance is by far the most expensive phase of any project.</li>
+<li>维护阶段是一个项目生命周期当中最为昂贵的阶段。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li><em>Be</em> the maintainer.</li>
+<li><em>成为</em>一个维护者。</li>
+<li>Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.</li>
+<li>常常作出假设，假设你的代码维护者是一个有精神暴力倾向的并且知道你住处的人。</li>
+<li>Always code and comment in such a way that if someone a few notches junior picks up the code, they will take pleasure in reading and learning from it.</li>
+<li>在编码和注释的时候，时长以阅读者的角度去考虑，考虑他们是否会爱上阅读和学习你的成果。</li>
+<li><a href="http://www.sensible.com/dmmt.html" target="_blank" rel="noopener">Don’t make me think</a>.</li>
+<li>以常识和简洁的角度去说明事情关键，不要让读者去想太多。<a href="http://www.sensible.com/dmmt.html" target="_blank" rel="noopener">Don’t make me think</a>.</li>
+<li>Use the <a href="http://en.wikipedia.org/wiki/Principle_of_least_astonishment" target="_blank" rel="noopener">Principle of Least Astonishment</a>.</li>
+<li>遵循准则<a href="http://en.wikipedia.org/wiki/Principle_of_least_astonishment" target="_blank" rel="noopener">Principle of Least Astonishment</a>.</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://c2.com/cgi/wiki?CodeForTheMaintainer" target="_blank" rel="noopener">Code For The Maintainer</a></li>
+<li><a href="http://blog.codinghorror.com/the-noble-art-of-maintenance-programming/" target="_blank" rel="noopener">The Noble Art of Maintenance Programming</a></li>
+</ul>
+<h2 id="Avoid-Premature-Optimization"><a href="#Avoid-Premature-Optimization" class="headerlink" title="Avoid Premature Optimization"></a>Avoid Premature Optimization</h2><h2 id="避免过度过早优化"><a href="#避免过度过早优化" class="headerlink" title="避免过度过早优化"></a>避免过度过早优化</h2><p>Quoting <a href="http://en.wikiquote.org/wiki/Donald_Knuth" target="_blank" rel="noopener">Donald Knuth</a>:</p>
+<p>引用 <a href="http://en.wikiquote.org/wiki/Donald_Knuth" target="_blank" rel="noopener">唐纳德·克努斯</a>:</p>
+<blockquote>
+<p>Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.<br>程序员花费极大的时间去思考、担心哪些程序里非关键部位的运行速度，而这种种在调试、维护上的工作效能方面常常引发了负面的影响。我们应该摒弃那些花费了97%时间去做的低效能的事情。过早的优化是所有邪恶的根源。不管怎样，我们不能放弃那3%关键部分的机会。</p>
+</blockquote>
+<p>Understanding what is and isn’t “premature” is critical of course.</p>
+<p>对于是否属于“过早的优化”，这是一项关键的课程。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>It is unknown upfront where the bottlenecks will be.</li>
+<li>过早优化会引发未来不可知的瓶颈的发生。</li>
+<li>After optimization, it might be harder to read and thus maintain.</li>
+<li>优化之后，它或许变得更加难以阅读和维护。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li><a href="http://c2.com/cgi/wiki?MakeItWorkMakeItRightMakeItFast" target="_blank" rel="noopener">Make It Work Make It Right Make It Fast</a></li>
+<li><a href="http://c2.com/cgi/wiki?MakeItWorkMakeItRightMakeItFast" target="_blank" rel="noopener">使之具备可行性、正确性、快速性</a></li>
+<li>Don’t optimize until you need to, and only after profiling you discover a bottleneck optimise that.</li>
+<li>只有在你需要的时候才去优化，只有在做了瓶颈分析之后再去做实际的优化。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Program_optimization" target="_blank" rel="noopener">Program optimization</a></li>
+<li><a href="http://c2.com/cgi/wiki?PrematureOptimization" target="_blank" rel="noopener">Premature Optimization</a></li>
+</ul>
+<h2 id="Boy-Scout-Rule"><a href="#Boy-Scout-Rule" class="headerlink" title="Boy-Scout Rule"></a>Boy-Scout Rule</h2><h2 id="美国童子军准则"><a href="#美国童子军准则" class="headerlink" title="美国童子军准则"></a>美国童子军准则</h2><p>The Boy Scouts of America have a simple rule that we can apply to our profession: “Leave the campground cleaner than you found it”. The boy-scout rule states that we should always leave the code cleaner than we found it.</p>
+<p>美国童子军有一项简单的准则：“离开野营区之时保证要比自己来的时候更加干净”。我们可以将这一准则应用在计算机方面：“时常迫使代码比我们发现它的时候更整洁更清晰”。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>When making changes to an existing codebase the code quality tends to degrade, accumulating technical debt. Following the boyscout rule, we should mind the quality with each commit. Technical debt is resisted by continuous refactoring, no matter how small.</li>
+<li>当我们对现有代码库作修改之时，现有代码库质量低并且积累了许多的技术债务。根据美国童子军准则，我们理应关心每一次提交的代码质量，而技术债务也应该在持续的重构过程中逐渐变少。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>With each commit make sure it does not degrade the codebase quality.</li>
+<li>保证每一次的提交不会造成代码库的代码质量的降级。</li>
+<li>Any time someone sees some code that isn’t as clear as it should be, they should take the opportunity to fix it right there and then.</li>
+<li>任何时间，任何人，只要发现了代码可以变得更为清晰和整洁，那么他就应该寻找机会去实现它。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://martinfowler.com/bliki/OpportunisticRefactoring.html" target="_blank" rel="noopener">Opportunistic Refactoring</a></li>
+</ul>
+<h2 id="Minimise-Coupling"><a href="#Minimise-Coupling" class="headerlink" title="Minimise Coupling"></a>Minimise Coupling</h2><h2 id="低耦合"><a href="#低耦合" class="headerlink" title="低耦合"></a>低耦合</h2><p>Coupling between modules/components is their degree of mutual interdependence; lower coupling is better. In other words, coupling is the probability that code unit “B” will “break” after an unknown change to code unit “A”.</p>
+<p>耦合度指的是模块/组件之间的相互依赖程度。耦合度越低则越好。换句话说，耦合度高会导致代码单元“B”因为代码单元“A”的一个未知变更而被打断。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>A change in one module usually forces a ripple effect of changes in other modules.</li>
+<li>一个模块的变更会迫使和波及其他的模块也需要发生相应的变更。</li>
+<li>Assembly of modules might require more effort and/or time due to the increased inter-module dependency.</li>
+<li>模块集成过程中会涉及更多的修改、更多的时间，正是因为模块内的相互依赖复杂度的升高。</li>
+<li>A particular module might be harder to reuse and/or test because dependent modules must be included.</li>
+<li>一个指定的模块将变得难以重用和测试，正是因为其依赖的其他模块也必须被包含进来。</li>
+<li>Developers might be afraid to change code because they aren’t sure what might be affected.</li>
+<li>开发者会害怕修改代码，因为他们不确定具体有多少方面会被涉及。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Eliminate, minimise, and reduce complexity of necessary relationships.</li>
+<li>尽可能多地，甚至消除复杂必须的关联关系。</li>
+<li>By hiding implementation details, coupling is reduced.</li>
+<li>隐藏了实现的细节之后，耦合性往往会被降低。</li>
+<li>Apply the <a href="#law-of-demeter">Law of Demeter</a>.</li>
+<li>遵循迪米特法则<a href="#law-of-demeter">Law of Demeter</a>.</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Coupling_(computer_programming)" target="_blank" rel="noopener">Coupling</a></li>
+<li><a href="http://c2.com/cgi/wiki?CouplingAndCohesion" target="_blank" rel="noopener">Coupling And Cohesion</a></li>
+</ul>
+<h2 id="Law-of-Demeter"><a href="#Law-of-Demeter" class="headerlink" title="Law of Demeter"></a>Law of Demeter</h2><h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><p>Don’t talk to strangers.</p>
+<p>不要告诉陌生人。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>It usually tightens coupling</li>
+<li>依赖往往会增加耦合度。</li>
+<li>It might reveal too much implementation details</li>
+<li>依赖会露出过多的实现细节。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<p>A method of an object may only call methods of:</p>
+<p>一个对象的一个方法，只能调用如下内容：</p>
+<ol>
+<li>The object itself.</li>
+<li>对象本身。</li>
+<li>An argument of the method.</li>
+<li>方法参数。</li>
+<li>Any object created within the method.</li>
+<li>方法内所创建的对象。</li>
+<li>Any direct properties/fields of the object.</li>
+<li>对象内直接包含的属性、字段。</li>
+</ol>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Law_of_Demeter" target="_blank" rel="noopener">Law of Demeter</a></li>
+<li><a href="http://haacked.com/archive/2009/07/14/law-of-demeter-dot-counting.aspx/" target="_blank" rel="noopener">The Law of Demeter Is Not A Dot Counting Exercise</a></li>
+</ul>
+<h2 id="Composition-Over-Inheritance"><a href="#Composition-Over-Inheritance" class="headerlink" title="Composition Over Inheritance"></a>Composition Over Inheritance</h2><h2 id="组合优于继承"><a href="#组合优于继承" class="headerlink" title="组合优于继承"></a>组合优于继承</h2><p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Less coupling between classes.</li>
+<li>降低类之间的耦合。</li>
+<li>Using inheritance, subclasses easily make assumptions, and break LSP.</li>
+<li>使用继承、子类会易于出现断言，并且打破里氏替换原则。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Test for LSP (substitutability) to decide when to inherit.</li>
+<li>根据里氏替换原则，判断什么时候使用继承。</li>
+<li>Compose when there is a “has a” (or “uses a”) relationship, inherit when “is a”.</li>
+<li>若是”has a” (或者”uses a”)关系的时候使用组合，若是”is a”关系则使用继承。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://blogs.msdn.com/b/thalesc/archive/2012/09/05/favor-composition-over-inheritance.aspx" target="_blank" rel="noopener">Favor Composition Over Inheritance</a></li>
+</ul>
+<h2 id="Orthogonality"><a href="#Orthogonality" class="headerlink" title="Orthogonality"></a>Orthogonality</h2><h2 id="正交性"><a href="#正交性" class="headerlink" title="正交性"></a>正交性</h2><blockquote>
+<p>The basic idea of orthogonality is that things that are not related conceptually should not be related in the system.<br>正交性的基本定义是，系统内概念不相同的部分，不应该形成关联和依赖。</p>
+</blockquote>
+<p>Source: <a href="http://www.artima.com/intv/dry3.html" target="_blank" rel="noopener">Be Orthogonal</a></p>
+<p>引用: <a href="http://www.artima.com/intv/dry3.html" target="_blank" rel="noopener">Be Orthogonal</a></p>
+<blockquote>
+<p>It is associated with simplicity; the more orthogonal the design, the fewer exceptions. This makes it easier to learn, read and write programs in a programming language. The meaning of an orthogonal feature is independent of context; the key parameters are symmetry and consistency.<br>它与简单性有关，设计的时候正交性越高，则异常发生地越少。这通常会使得代码变得更加容易学习、阅读和编写，无论你使用的是哪一种编程语言。正交性的一个典型特征是上下文之间互相没有依赖，核心参数之间会保持对称性和一致性。</p>
+</blockquote>
+<p>Source: <a href="http://en.wikipedia.org/wiki/Orthogonality_(programming)" target="_blank" rel="noopener">Orthogonality</a></p>
+<p>引用: <a href="http://en.wikipedia.org/wiki/Orthogonality_(programming)" target="_blank" rel="noopener">Orthogonality</a></p>
+<h2 id="Robustness-Principle"><a href="#Robustness-Principle" class="headerlink" title="Robustness Principle"></a>Robustness Principle</h2><h2 id="健壮性原则"><a href="#健壮性原则" class="headerlink" title="健壮性原则"></a>健壮性原则</h2><blockquote>
+<p>Be conservative in what you do, be liberal in what you accept from others<br>对内保持保守，对外保持自由。</p>
+</blockquote>
+<p>Collaborating services depend on each others interfaces. Often the interfaces need to evolve causing the other end to receive unspecified data. A naive implementation refuses to collaborate if the received data does not strictly follow the specification. A more sophisticated implementation will still work ignoring the data it does not recognize.</p>
+<p>协作服务依赖于各式各样的接口。通常地，接口的演变会致使另外一端接收到未指定的数据。倘若数据结构没有遵循规范，那么一个简单的不健壮的实现会遭到拒绝。一个健壮的实现会主动忽略不可识别的数据，继而持续工作。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>In order to be able to evolve services you need to ensure that a provider can make changes to support new demands while causing minimal breakage to their existing clients.</li>
+<li>为了使得程序服务得以演进，你需要确保提供者程序可以支持新的指令，尽管这些指令可能会对现有的客户端所导致的小面积破坏。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Code that sends commands or data to other machines (or to other programs on the same machine) should conform completely to the specifications, but code that receives input should accept non-conformant input as long as the meaning is clear.</li>
+<li>发送给其他机器（或者相同机器的其他程序）的指令或者数据的代码理应完全遵循指定的规范，但是接收方需要能够接收和处理不符合规范，但含义清晰的数据或指令。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Robustness_principle" target="_blank" rel="noopener">Robustness Principle in Wikipedia</a></li>
+<li><a href="http://martinfowler.com/bliki/TolerantReader.html" target="_blank" rel="noopener">Tolerant Reader</a></li>
+</ul>
+<h2 id="Maximise-Cohesion"><a href="#Maximise-Cohesion" class="headerlink" title="Maximise Cohesion"></a>Maximise Cohesion</h2><h2 id="高内聚"><a href="#高内聚" class="headerlink" title="高内聚"></a>高内聚</h2><p>Cohesion of a single module/component is the degree to which its responsibilities form a meaningful unit; higher cohesion is better.</p>
+<p>一个单一模块/组件的内聚性指的是它的职责形成了有具体含义的独立单元。内聚性自然越高也好。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Increased difficulty in understanding modules.</li>
+<li>增加了模块理解的难度。</li>
+<li>Increased difficulty in maintaining a system, because logical changes in the domain affect multiple modules, and because changes in one module require changes in related modules.</li>
+<li>增加了维护系统的成本消耗。因为一个方面的逻辑变更会引发其它多个关联模块需要同时发生变更。</li>
+<li>Increased difficulty in reusing a module because most applications won’t need the random set of operations provided by a module.</li>
+<li>增加了程序重用的难度。因为大多数的程序不需要模块所提供的随机操作。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Group related functionalities sharing a single responsibility (e.g. in a class).</li>
+<li>一组相似的功能共享使用一个单一的职责（例如在一个类里）。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Cohesion_(computer_science)" target="_blank" rel="noopener">Cohesion</a></li>
+<li><a href="http://c2.com/cgi/wiki?CouplingAndCohesion" target="_blank" rel="noopener">Coupling And Cohesion</a></li>
+</ul>
+<h2 id="Liskov-Substitution-Principle"><a href="#Liskov-Substitution-Principle" class="headerlink" title="Liskov Substitution Principle"></a>Liskov Substitution Principle</h2><h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><p>The LSP is all about expected behavior of objects:</p>
+<p>里氏替换原则是关于对象预期行为方面的描述：</p>
+<blockquote>
+<p>Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.<br>程序内的对象理应可以被它的子类所无缝替换，此间不需要作任何的程序订正操作。</p>
+</blockquote>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle" target="_blank" rel="noopener">Liskov substitution principle</a></li>
+<li><a href="http://freshbrewedcode.com/derekgreer/2011/12/31/solid-javascript-the-liskov-substitution-principle/" target="_blank" rel="noopener">The Liskov Substitution Principle</a></li>
+</ul>
+<h2 id="Open-Closed-Principle"><a href="#Open-Closed-Principle" class="headerlink" title="Open/Closed Principle"></a>Open/Closed Principle</h2><h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><p>Software entities (e.g. classes) should be open for extension, but closed for modification. I.e. such an entity can allow its behavior to be modified without altering its source code.</p>
+<p>软件实体（例如类）理应对扩展开放，对修改关闭。例如一个实体可以允许它的动作不需要经过修改源码而发生的演变。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Improve maintainability and stability by minimizing changes to existing code.</li>
+<li>在现有代码发生最小化改变的前提下，改善和提高可维护性和稳定性。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Write classes that can be extended (as opposed to classes that can be modified).</li>
+<li>编写可以被扩展的类（而不是类文件被修改）。</li>
+<li>Expose only the moving parts that need to change, hide everything else.</li>
+<li>只暴露那些需要修改以支持扩展的部分，其余的部分都隐藏。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Open/closed_principle" target="_blank" rel="noopener">Open Closed Principle</a></li>
+<li><a href="http://freshbrewedcode.com/derekgreer/2011/12/19/solid-javascript-the-openclosed-principle/" target="_blank" rel="noopener">SOLID JavaScript: The Open/Closed Principle</a></li>
+</ul>
+<h2 id="Single-Responsibility-Principle"><a href="#Single-Responsibility-Principle" class="headerlink" title="Single Responsibility Principle"></a>Single Responsibility Principle</h2><h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><p>A class should never have more than one reason to change.</p>
+<p>一个类不应该包含多于一个职责。</p>
+<p>Long version: Every class should have a single responsibility, and that responsibility should be entirely encapsulated by the class. Responsibility can be defined as a reason to change, so a class or module should have one, and only one, reason to change.</p>
+<p>长文字版本：每一个类都应该有一个职责，而这个职责应该被这个类所内聚。职责被定义为发生改变的一个原因，即一个类或者模块有且仅有一个原因会致使其发生演变。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>Maintainability: changes should be necessary only in one module or class.</li>
+<li>可维护性：变更只应该出现在一个模块或者一个类当中。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Apply <a href="#Curly-s-Law">Curly’s Law</a>.</li>
+<li>遵循<a href="#科里定律">科里定律</a>.</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank" rel="noopener">Single responsibility principle</a></li>
+</ul>
+<h2 id="Hide-Implementation-Details"><a href="#Hide-Implementation-Details" class="headerlink" title="Hide Implementation Details"></a>Hide Implementation Details</h2><h2 id="隐藏实现细节"><a href="#隐藏实现细节" class="headerlink" title="隐藏实现细节"></a>隐藏实现细节</h2><p>A software module hides information (i.e. implementation details) by providing an interface, and not leak any unnecessary information.</p>
+<p>一个软件模块应该隐藏一些信息（例如实现细节），仅提供一个接口即可，以确保不泄露任何不必要的信息。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>When the implementation changes, the interface clients are using does not have to change.</li>
+<li>当实现细节需要发生变更之时，接口消费方可以无缝使用而不需要作出任何变更。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Minimize accessibility of classes and members.</li>
+<li>最小化类及其成员的可访问性。</li>
+<li>Don’t expose member data in public.</li>
+<li>不要暴露成员数据在public域。</li>
+<li>Avoid putting private implementation details into a class’s interface.</li>
+<li>杜绝将私有的实现细节放置到类的接口层上。</li>
+<li>Decrease coupling to hide more implementation details.</li>
+<li>降低模块间耦合性，隐藏更多的不必要的实现细节。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Information_hiding" target="_blank" rel="noopener">Information hiding</a></li>
+</ul>
+<h2 id="Curly’s-Law"><a href="#Curly’s-Law" class="headerlink" title="Curly’s Law"></a>Curly’s Law</h2><h2 id="科里定律"><a href="#科里定律" class="headerlink" title="科里定律"></a>科里定律</h2><p>Curly’s Law is about choosing a single, clearly defined goal for any particular bit of code: Do One Thing.</p>
+<p>科里定律是关于如何为任一特定代码段选择一项单一的、定义明确的目标的一项法则：只作一件事。</p>
+<ul>
+<li><a href="http://blog.codinghorror.com/curlys-law-do-one-thing/" target="_blank" rel="noopener">Curly’s Law: Do One Thing</a></li>
+<li><a href="http://fortyplustwo.com/2008/09/06/the-rule-of-one-or-curlys-law/" target="_blank" rel="noopener">The Rule of One or Curly’s Law</a></li>
+</ul>
+<h2 id="Encapsulate-What-Changes"><a href="#Encapsulate-What-Changes" class="headerlink" title="Encapsulate What Changes"></a>Encapsulate What Changes</h2><h2 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h2><p>A good design identifies the hotspots that are most likely to change and encapsulates them behind an API. When an anticipated change then occurs, the modifications are kept local.</p>
+<p>一项好的设计意味着某些很有可能被修改和内聚的热点部分被隐藏在API的后方。当预期的变更出现时，这些变更也只需要在内部作出调整即可。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>To minimize required modifications when a change occurs</li>
+<li>当变更发生时，可以最小化变更的涉及面。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Encapsulate the concept that varies behind an API</li>
+<li>在API内部封装多样化的概念。</li>
+<li>Possibly separate the varying concept into its own module</li>
+<li>尽可能地从多样化的概念中，分隔出独立的单一模块。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="http://principles-wiki.net/principles:encapsulate_the_concept_that_varies" target="_blank" rel="noopener">Encapsulate the Concept that Varies</a></li>
+<li><a href="http://blogs.msdn.com/b/steverowe/archive/2007/12/26/encapsulate-what-varies.aspx" target="_blank" rel="noopener">Encapsulate What Varies</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Information_hiding" target="_blank" rel="noopener">Information Hiding</a></li>
+</ul>
+<h2 id="Interface-Segregation-Principle"><a href="#Interface-Segregation-Principle" class="headerlink" title="Interface Segregation Principle"></a>Interface Segregation Principle</h2><h2 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h2><p>Reduce fat interfaces into multiple smaller and more specific client specific interfaces. An interface should be more dependent on the code that calls it than the code that implements it. </p>
+<p>降低接口的粒度，使得接口更小更具体，更接近调用方的现实需要。一个接口的定义更多地应该依赖于调用方的代码，而不是实现方可以实现的细节。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>If a class implements methods that are not needed the caller needs to know about the method implementation of that class. For example if a class implements a method but simply throws then the caller will need to know that this method shouldn’t actually be called.</li>
+<li>如果一个类的实现方法已经被废弃，那么调用方理应需要知晓这个类的实现方法的具体实现细节。例如，假设一个类的实现方法仅仅是抛出了一个异常，那么调用方需要知道这个方法不应该再被调用。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Avoid fat interfaces. Classes should never have to implement methods that violate the <a href="#single-responsibility-principle">Single responsibility principle</a>.</li>
+<li>杜绝肥胖的接口存在。一个类的实现方法的设计不应该违背<a href="#single-responsibility-principle">单一职责原则</a>.</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Interface_segregation_principle" target="_blank" rel="noopener">Interface segregation principle</a></li>
+</ul>
+<h2 id="Command-Query-Separation"><a href="#Command-Query-Separation" class="headerlink" title="Command Query Separation"></a>Command Query Separation</h2><h2 id="命令查询职责分离（也称Command-Query-Responsibility-Segregation，CQRS）"><a href="#命令查询职责分离（也称Command-Query-Responsibility-Segregation，CQRS）" class="headerlink" title="命令查询职责分离（也称Command Query Responsibility Segregation，CQRS）"></a>命令查询职责分离（也称Command Query Responsibility Segregation，CQRS）</h2><p>The Command Query Separation principle states that each method should be either a command that performs an action or a query that returns data to the caller but not both. Asking a question should not modify the answer.</p>
+<p>命令查询职责分离准则的具体阐述可以参见资料所引述到的Martin Fowler的文章。命令查询职责分离原则指出，每个方法应该是执行一个操作的命令（命令是void的，不返回任何结果，但会改变对象的状态）或者一个查询（返回结果，但是不会改变对象的状态，对系统没有副作用），它将数据返回给调用者，而不是两者。提出问题不应该修改答案。</p>
+<p>With this principle applied the programmer can code with much more confidence. The query methods can be used anywhere and in any order since they do not mutate the state. With commands one has to be more careful.</p>
+<p>使用这条准则，程序员在编码之时可以更加自信，查询方法可以在任何地方以任意次序使用，因为它不会影响到对象状态。而命令则需要更加小心谨慎。</p>
+<p>Why</p>
+<p>为什么？</p>
+<ul>
+<li>By clearly separating methods into queries and commands the programmer can code with additional confidence without knowing each method’s implementation details.</li>
+<li>基于清晰地将方法分隔为查询和命令两大阵营之后，程序员在编码方面更加自信了，因为他们可以不需要去了解每个方法的实现具体细节。</li>
+</ul>
+<p>How</p>
+<p>怎么办？</p>
+<ul>
+<li>Implement each method as either a query or a command</li>
+<li>方法设计之时，要么是查询，要么是命令，不可二者兼备。</li>
+<li>Apply naming convention to method names that implies whether the method is a query or a command</li>
+<li>针对方法名的命名上作约定和规范，使得方法名上可以直接表露出它具体是查询还是命令。</li>
+</ul>
+<p>Resources</p>
+<p>更多资料</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation" target="_blank" rel="noopener">Command Query Separation in Wikipedia</a></li>
+<li><a href="http://martinfowler.com/bliki/CommandQuerySeparation.html" target="_blank" rel="noopener">Command Query Separation by Martin Fowler</a></li>
+<li><a href="http://www.cnblogs.com/yangecnu/p/Introduction-CQRS.html" target="_blank" rel="noopener">Introduction CQRS</a></li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://yoursite.com/posts/2017/05/16/programming-principles/" title="Programming Principles(编程准则)" target="_blank" rel="external">http://yoursite.com/posts/2017/05/16/programming-principles/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/hello-world/" title="Hello World"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/2016/12/19/parallel-of-buying-scenario/" title="并发场景实践方案优劣评析"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat" data-mobile-sites="weibo,qq,wechat"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/jeromechan" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://www.linkedin.com/in/chenjinlong/" target="_blank" title="Linkedin" data-toggle=tooltip data-placement=top><i class="icon icon-linkedin"></i></a></li>
+        
+        <li><a href="https://twitter.com/jeromechan369" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="http://weibo.com/5812529126" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2013-2020 Jerome Chan
+        
+<!--        <div class="publishby">-->
+<!--        	< %= __('copyright.theme_by') % > <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.-->
+<!--        </div>-->
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'ecf46d673fc8c48a8f6f',
+    clientSecret: '268a6dcde075fd5cc3e2f3e676c93cbde3868c3e',
+    repo: 'jeromechan.github.io',
+    owner: 'jeromechan',
+    admin: ['jeromechan'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
+
+
+
+
+
+
+
+</body>
+</html>
