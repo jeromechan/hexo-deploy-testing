@@ -28,7 +28,8 @@ CURRENT_DIR=${PWD}
 # git commit -am 'Auto reset master files using hexo-deploy.sh script.'
 
 # 5. 将/tmp/jeromechan.github.io文件内容全部拷贝至master分支下
-cp -r /tmp/$REPO_NAME ./
+cp -r /tmp/$REPO_NAME/* ./
+rm -rf /tmp/$REPO_NAME
 
 # 6. 执行git add * & git commit -am 'Refresh and add master files using hexo-deploy.sh script.' & git push
 git add *
