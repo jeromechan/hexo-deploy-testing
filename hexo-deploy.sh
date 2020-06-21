@@ -4,6 +4,7 @@
 REPO_NAME="jeromechan.github.io"
 BRANCH_SOURCE="source-hexo"
 BRANCH_MASTER="master"
+CURRENT_DIR=${PWD}
 
 # # 1. 切换至source-hexo分支下，执行hexo clean & hexo generate
 # git checkout $BRANCH_SOURCE
@@ -23,5 +24,8 @@ BRANCH_MASTER="master"
 
 # 4. 切换至master分支下，删除所有非隐藏的项目文件，然后执行git commit -am 'Auto reset master files using hexo-deploy.sh script.'
 git checkout $BRANCH_MASTER
-rm -rf .
-git commit -am 'Auto reset master files using hexo-deploy.sh script.'
+echo $CURRENT_DIR
+rm -r $CURRENT_DIR/*
+# git rm -r --cached *
+# git commit -am 'Auto reset master files using hexo-deploy.sh script.'
+
