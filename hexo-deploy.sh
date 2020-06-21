@@ -22,10 +22,18 @@ CURRENT_DIR=${PWD}
 # cp -r ./public/ /tmp/$REPO_NAME
 # cp ./CNAME /tmp/$REPO_NAME/
 
-# 4. 切换至master分支下，删除所有非隐藏的项目文件，然后执行git commit -am 'Auto reset master files using hexo-deploy.sh script.'
-git checkout $BRANCH_MASTER
-echo $CURRENT_DIR
-rm -r $CURRENT_DIR/*
-# git rm -r --cached *
+# # 4. 切换至master分支下，删除所有非隐藏的项目文件，然后执行git commit -am 'Auto reset master files using hexo-deploy.sh script.'
+# git checkout $BRANCH_MASTER
+# rm -r $CURRENT_DIR/*
 # git commit -am 'Auto reset master files using hexo-deploy.sh script.'
 
+# 5. 将/tmp/jeromechan.github.io文件内容全部拷贝至master分支下
+cp -r /tmp/$REPO_NAME ./
+
+# 6. 执行git add * & git commit -am 'Refresh and add master files using hexo-deploy.sh script.' & git push
+git add *
+git commit -am 'Refresh and add master files using hexo-deploy.sh script.'
+git push
+
+# 7. 切换至source-hexo分支下
+git checkout $BRANCH_SOURCE
